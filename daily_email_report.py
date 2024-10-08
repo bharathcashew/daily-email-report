@@ -20,6 +20,8 @@ def send_email_report():
     # Your SMTP server credentials (example for Gmail)
     smtp_server = "smtp.gmail.com"
     smtp_port = 587  # For TLS
+    print("gmail_user"+gmail_user)
+    print("gmail_passcode"+gmail_passcode)
     smtp_user = gmail_user #"shanbit200@gmail.com"  # Replace with your email
     smtp_password = gmail_passcode #"pfie mihn knre eoiv"
     #smtp_password = "your_app_password"  # Replace with your app-specific password
