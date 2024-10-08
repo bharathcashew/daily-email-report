@@ -5,6 +5,8 @@ import schedule
 import time
 from datetime import datetime
 
+from getting_market_data import generate_html_email_body
+
 # Function to send the email
 def send_email_report():
     # Your SMTP server credentials (example for Gmail)
@@ -28,6 +30,8 @@ def send_email_report():
     Best regards,
     Your Python Automation Script
     """
+
+    email_body = generate_html_email_body()
     
     # Create a MIMEMultipart message
     message = MIMEMultipart()
@@ -58,6 +62,7 @@ def schedule_daily_email():
     while True:
         schedule.run_pending()
         time.sleep(60)  # Wait 60 seconds before checking the schedule again
+
 
 # Run the scheduler
 if __name__ == "__main__":
