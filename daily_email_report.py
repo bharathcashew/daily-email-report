@@ -1,3 +1,4 @@
+import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -7,13 +8,20 @@ from datetime import datetime
 
 from getting_market_data import generate_html_email_body
 
+gmail_user = os.getenv('GMAIL_USER')
+gmail_passcode = os.getenv('APP_PASSCODE')
+
+if not gmail_user or not gmail_passcode:
+    raise ValueError("GMAIL_USER or GMAIL_PASSWORD environment variables are not set")
+
+
 # Function to send the email
 def send_email_report():
     # Your SMTP server credentials (example for Gmail)
     smtp_server = "smtp.gmail.com"
     smtp_port = 587  # For TLS
-    smtp_user = "shanbit200@gmail.com"  # Replace with your email
-    smtp_password ="pfie mihn knre eoiv"
+    smtp_user = gmail_user #"shanbit200@gmail.com"  # Replace with your email
+    smtp_password = gmail_passcode #"pfie mihn knre eoiv"
     #smtp_password = "your_app_password"  # Replace with your app-specific password
     
     # Email details
