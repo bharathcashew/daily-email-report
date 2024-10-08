@@ -61,4 +61,5 @@ def schedule_daily_email():
 
 # Run the scheduler
 if __name__ == "__main__":
-    schedule_daily_email()
+    send_email_report()
+    #schedule_daily_email()
