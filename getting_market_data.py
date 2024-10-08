@@ -28,8 +28,8 @@ def generate_html_email_body():
         <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Detail</th>
+                    <th>Index</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>
