@@ -40,7 +40,7 @@ def send_email_report():
     message['Subject'] = subject
     
     # Attach the email body to the message
-    message.attach(MIMEText(email_body, 'plain'))
+    message.attach(MIMEText(email_body, 'html'))
     
     try:
         # Connect to the SMTP server
