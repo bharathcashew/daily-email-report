@@ -20,14 +20,14 @@ def send_email_report():
     # Your SMTP server credentials (example for Gmail)
     smtp_server = "smtp.gmail.com"
     smtp_port = 587  # For TLS
-    smtp_user = gmail_user   # Replace with your email
+    smtp_user = bharathvenkat   # Replace with your email
     smtp_password = gmail_passcode #Replace with your app-specific password
     #smtp_password = "your_app_password"  # Replace with your app-specific password
     
     # Email details
     from_email = smtp_user
-    to_email = "endlessjourney1983@gmail.com"  # Replace with recipient's email
-    subject = f"Daily Report - {datetime.now().strftime('%Y-%m-%d')}"
+    to_email = "bharathvenkat@gmail.com"  # Replace with recipient's email
+    subject = "Daily Report - {datetime.now().strftime('%Y-%m-%d')}"
     
     # Create the body of the email
     email_body = """
